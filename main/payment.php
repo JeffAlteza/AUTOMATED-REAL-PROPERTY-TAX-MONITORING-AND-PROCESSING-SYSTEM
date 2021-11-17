@@ -240,8 +240,8 @@ if (isset($_GET['id'])) {
 <?php
                                                                 require 'checkLiabilities.php';
                                                                 ?>
-                                                                <div class="container-fluid" style="height: 200px; overflow: auto;">
-                                                                <table class="table table-striped table-sm" style="padding: 0;">
+                                                                <div class="container-fluid mx-0 px-0" style="height: 300px; overflow: auto;">
+                                                                <table class="table table-striped table-sm" style="width: 100%; padding: 0;">
                                                                     <thead>
                                                                         <tr>
 
@@ -300,7 +300,7 @@ if (isset($_GET['id'])) {
                                                                     </tbody>
                                                                 </table>
                                                                 </div>
-                                                                <button type="submit" href="#" id="proceed_button" name="proceed_button" form="Year_Selected" onclick="goNext();" class="btn btn-success btn-block shadow-sm">
+                                                                <button type="submit" href="#" id="proceed_button" name="proceed_button" form="Year_Selected" onclick="goNext();" class="btn btn-success btn-block shadow-sm mt-3">
 
                                                                     Proceed to Payment
                                                                 </button>
