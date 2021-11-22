@@ -326,7 +326,7 @@ document.write(new Date().getFullYear());
               </div>
               <div class="col-md-6">
                 <label for="rolesField" class="form-label">Role</label>
-                <select class="form-select form-select-sm"  style="color:#AAAAAA;" name="rolesField" id="rolesField" required>
+                <select class="form-select form-select-sm"  name="rolesField" id="rolesField" required>
                               <option value="">Select Role</option>
                               <option value="Member">Member</option>
                               <option value="Admin">Admin</option>

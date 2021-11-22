@@ -141,7 +141,7 @@ tr.total td {
 <tr>
 <th colspan="3" rowspan="1" width="40%">OFFICIAL RECEIPT</th>
 <th colspan="1" rowspan="2" width="30%">PAYOR</th>
-<th colspan="1" rowspan="2" width="15%">PARTICULARS(BASIC)</th>
+<th colspan="1" rowspan="2" width="15%">PARTICULARS</th>
 <th colspan="1" rowspan="2" width="15%">AMOUNT</th>
 </tr>
 <tr>
@@ -168,15 +168,7 @@ if ($results->num_rows>0) {
     <td>'.$result['DATE'].'</td>
     <td>'.$result['TD_ARP'].'</td>
     <td>'.$result['PAYOR'].'</td>
-    <td>'; if($payment_year == 0){
-      echo $last_payment; 
-    }else if($last_payment == 0){
-      echo $payment_year;
-    } else if($payment_year != 0 && $last_payment != 0)  {
-      echo $payment_year.'-'. $last_payment;
-    }echo '</td>
-    <td>'.$result['BASIC_REPORT'].'</td>
-  </tr>';
+    <td>RPT</td>';
   $total_basic_report =  $total_basic_report + $result['BASIC_REPORT'];
   }  while($numberofRows <= 34){
     $numberofRows++;
@@ -212,20 +204,20 @@ if ($results->num_rows>0) {
     <p style="text-indent: 25px; margin-left: 25px; margin-right: 12px; text-align: justify; margin-bottom: 40px;">I hereby certify on my official oath that the above is true statement of all collections received by me during the period stated above for which Official Receipt Nos. ___________ to ___________ inclusive were actually issued by me in the amounts shown thereon. I also certify that I have not received money from whatever source without having issued the necessary Official Receipt acknowledgement thereof. Collections received by sub-collector are recorded above in lump-sum opposite their respective collection report numbers. I certify further that the balance shown above agrees with the balance a appearing in my Cash Receipts Record.</p>
     </div>
     <div class="col-3"></div>
-    <div class="col-5 text-center mb-2">
-      <p class="mb-0">BRIGIDA ZAYDA M. CABAÑOG</p>
+    <div class="col-6 text-center mb-2">
+    <p class="mb-0"><?php echo strtoupper($userName); ?></p> 
     <div class="h-divider mt-0"></div>
     <p>Name and Signature of Collecting Officer</p>
     </div>
     <div class="col-3"></div>
 
-    <div class="col-4 text-center">
-    <p class="mb-0"><?php echo strtoupper($userName); ?></p>
+    <div class="col-6 text-center">
+    <p class="mb-0">BRIGIDA ZAYDA M. CABAÑOG</p>
     <div class="h-divider mt-0"></div>
     <p>Official</p>
     </div>
 
-    <div class="col-4 text-center">
+    <div class="col-6 text-center">
     <p class="mb-0"><?php echo date('m-d-Y')?></p>
     <div class="h-divider mt-0"></div>
     <p>Date</p>
