@@ -168,7 +168,10 @@ if ($results->num_rows>0) {
     <td>'.$result['DATE'].'</td>
     <td>'.$result['TD_ARP'].'</td>
     <td>'.$result['PAYOR'].'</td>
-    <td>RPT</td>';
+    <td>RPT</td>
+    <td>'.$result['SEF_REPORT'].'</td>
+    ';
+    
   $total_basic_report =  $total_basic_report + $result['SEF_REPORT'];
   }  while($numberofRows <= 34){
     $numberofRows++;
