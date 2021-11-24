@@ -194,14 +194,14 @@ if (isset($_GET['id'])) {
                                                     <!-- Credit card form tabs -->
                                                     <ul class="nav nav-pills bg-light  rounded nav-fill" id="pills-tab" role="tablist">
                                                         <li class="nav-item" role="presentation">
-                                                            <button class="nav-link active" id="liabs" data-bs-toggle="pill" data-bs-target="#history" type="button" role="tab" aria-controls="pills-home" aria-selected="true">History</button>
+                                                            <button class="nav-link active" id="liabs" data-bs-toggle="pill" data-bs-target="#history" type="button" role="tab" aria-controls="pills-home" aria-selected="true">1. History</button>
                                                         </li>
 
                                                         <li class="nav-item" role="presentation">
-                                                            <button class="nav-link" id="transaction_details" data-bs-toggle="pill" data-bs-target="#details" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" disabled>Payment</button>
+                                                            <button class="nav-link" id="transaction_details" data-bs-toggle="pill" data-bs-target="#details" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" disabled>2. Payment</button>
                                                         </li>
                                                         <li class="nav-item" role="presentation">
-                                                            <button class="nav-link" id="receiptOfficial" data-bs-toggle="pill" data-bs-target="#receipt" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Receipt</button>
+                                                            <button class="nav-link" id="receiptOfficial" data-bs-toggle="pill" data-bs-target="#receipt" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">3. Receipt</button>
                                                         </li>
                                                     </ul>
                 </div>

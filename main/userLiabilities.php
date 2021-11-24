@@ -7,8 +7,6 @@
     $barangay = $_SESSION['barangay'];
     $classification = $_SESSION['classification'];
 
-    echo $_SESSION['tdNumber'];
-    echo $tdNumber;
     ?>
 
  <!DOCTYPE html>
@@ -20,7 +18,7 @@
      <link rel="icon" type="image/png" href="../assets/img/favicon.png">
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
      <title>
-         Material Dashboard by Creative Tim
+        Liabilities
      </title>
      <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
      <!--     Fonts and icons     -->
@@ -41,6 +39,15 @@
  </head>
 
  <body class="">
+ <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="../homepage\public\index.html"><img class="" style="width: 30px; height: 30px;" src="../assets/img/favicon.png"/>&nbsp; Agoncillo RPT</a>
+          </div>
+         
+         
+        </div>
+      </nav>
      <div class="wrapper d-flex justify-content-center" style="padding-top: 150px;">
 
          <div class="container-fluid">
@@ -51,9 +58,68 @@
                      <div class="card">
                          <div class="card-header card-header-success">
                              <h4 class="card-title" style="font-weight: 600;">Liabilities</h4>
-                             <p class="card-category">Check your liabilities here.</p>
+                             <p class="card-category">Check your tax due here.</p>
                          </div>
                          <div class="card-body mt-2">
+                         <div class="row">
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label class="bmd-label-floating">TD/ARP No.</label>
+        <input type="text" name="tdNumber" value="<?php echo $tdNumber ?>" class="form-control" required>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="form-group">
+        <label class="bmd-label-floating">Owner Name</label>
+        <input type="text" name="ownerName" value="<?php echo $ownerName ?>" class="form-control" required>
+    </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="bmd-label-floating">Classification</label>
+        <input type="text" name="classification" value="<?php echo $classification ?>"class="form-control" required>
+    </div>
+</div>
+
+
+<div class="col-md-6">
+    <div class="form-group">
+        <select class="custom-select d-flex align-items-center justify-content-center"  id="selectBarangay" style="font-family: Roboto; height: 38px;" name="selectBarangay" required="">
+            <option selected value="" disabled>Select Barangay</option>
+            <!--<option value="adia">           Adia            </option>
+<option value="bagong Sikat">   Bagong Sikat    </option>
+<option value="balangon">       Balangon        </option>-->
+            <option value="bangin"> Bangin </option>
+            <option value="banyaga"> Banyaga </option>
+            <!--<option value="barigon">        Barigon         </option>-->
+            <option value="bilibinwang"> Bilinbiwang </option>
+            <option value="coral_na_munti"> Coral na Munti </option>
+            <!--<option value="guitna">         Guitna          </option>
+<option value="mabini">         Mabini          </option>-->
+            <option value="pamiga"> Pamiga </option>
+            <!--<option value="panhulan">       Panhulan        </option>-->
+            <option value="pansipit"> Pansipit </option>
+            <option value="poblacion"> Poblacion </option>
+            <option value="pook"> Pook </option>
+            <option value="san_jacinto"> San Jacinto </option>
+            <!--<option value="san_teodoro">    San Teodoro     </option>
+<option value="santa_cruz">     Santa Cruz      </option>
+<option value="santo_tomas">    Santo Tomas     </option>-->
+            <option value="subic_ibaba"> Subic Ibaba </option>
+            <option value="subic_ilaya"> Subic Ilaya </option>
+        </select>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
                              <?php
 
                                 
@@ -102,7 +168,7 @@
                                         }
                                         echo '
                 
-                You can select year range you want to pay. </p></div>';
+                You can select year range you want to compute. </p></div>';
                                         echo '
                 <div class="col-lg-2 col-sm-12 my-1 mx-0 d-flex align-items-center">
                 <select class="custom-select" style="height: 30px;" name="latestPaymentselect"  id="latestPaymentselect">
@@ -137,23 +203,24 @@
                                     }}
                                 }
                                 ?>
-                                <button type="submit" onclick="" name="compute" class="btn btn-success pull-right">Compute</button>
+                                
                                 <?php 
                                 if (isset($_POST['compute'])) {
                                     require 'computeForUser.php';
-                                    echo' <p style="font-size: 20px; font-weight:  800;">Your tax due for the year '; 
+                                    echo' <div style="background-color:#eee;font-weight: 400; font-size: 12px; padding: 15px" class="alert alert-sm d-flex align-items-center justify-content-center" role="alert">
+                                    <p style="font-size: 20px; font-weight: 500;">Your tax due for the year '; 
                                     if($selRange == 0){
                                     echo $selYear;
                                       } else if($selRange != 0 && $selYear != 0)  {
                                        echo $selYear .'-'. $selRange;
                                       }
                                       echo ': ₱';
-                                      echo number_format($totalAll,2); echo'</p>';
+                                      echo number_format($totalAll,2); echo'</p> </div>';
                                 }
                                
                                 ?>
 
-                               
+        <button type="submit" onclick="" name="compute" class="btn btn-success pull-right">Compute</button> 
 
 
                             </form>

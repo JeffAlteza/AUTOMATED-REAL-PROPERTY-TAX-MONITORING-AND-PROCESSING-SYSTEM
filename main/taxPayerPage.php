@@ -30,7 +30,7 @@
      <link rel="icon" type="image/png" href="../assets/img/favicon.png">
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
      <title>
-         Material Dashboard by Creative Tim
+         Tax Due
      </title>
      <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
      <!--     Fonts and icons     -->
@@ -51,6 +51,15 @@
  </head>
 
  <body class="">
+ <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="../homepage\public\index.html"><img class="" style="width: 30px; height: 30px;" src="../assets/img/favicon.png"/>&nbsp; Agoncillo RPT</a>
+          </div>
+         
+         
+        </div>
+      </nav>
      <div class="wrapper d-flex justify-content-center" style="padding-top: 150px;">
 
          <div class="container-fluid">
@@ -131,15 +140,15 @@
                              <p class="card-category">Check your payment history here.</p>
                          </div>
                          <div class="card-body table-responsive mt-2">
-                             <div class="container-fluid" style="overflow: auto;">
-                                 <table class="table px-0 mx-0" width="100%" style="overflow: auto;">
+                             <div class="container-fluid" style="overflow: auto; height: 500px;">
+                                 <table class="table px-0 mx-0" width="100%" style="overflow: auto; ">
                                      <thead>
                                          <th>
                                              <tr>
-                                                 <td>Name of Collector</td>
-                                                 <td>Amount Paid</td>
-                                                 <td>Date Covered</td>
-                                                 <td>Date of Payment</td>
+                                                 <td style="font-weight: 600;">Name of Collector</td>
+                                                 <td style="font-weight: 600;">Amount Paid</td>
+                                                 <td style="font-weight: 600;">Date Covered</td>
+                                                 <td style="font-weight: 600;">Date of Payment</td>
                                              </tr>
                                          </th>
                                      </thead>

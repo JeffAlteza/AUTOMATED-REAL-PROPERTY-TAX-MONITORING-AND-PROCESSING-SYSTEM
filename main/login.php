@@ -93,7 +93,7 @@ if(isset($_SESSION['login'])){
                 <div class="container ">
                     <div class="row">
                         <div class="text-center">
-                            <img src="../images/icon.png" alt="computer icon" />
+                           <a href="../homepage\public\index.html"> <img src="../images/icon.png" alt="computer icon" /> </a>
                             </div>
 
                             <div class="col-12 text-center">
