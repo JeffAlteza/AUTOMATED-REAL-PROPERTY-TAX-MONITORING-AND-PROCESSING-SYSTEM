@@ -51,10 +51,7 @@ if ($result3->num_rows>0){
                 <option selected>'.$latestPayment1.'</option>'
                 ;
                 
-                for($k=$latestPayment+2; $k<=$currentYears ;$k++){
-                echo '
-                    <option value="'.$k.'">'.$k.'</option>';
-                }
+               
                 echo '</select> </div>';
 
                 echo '

@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Manila');
 require 'connection.php';
 session_start();
 if (!isset($_SESSION['login'])) {

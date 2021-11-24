@@ -194,14 +194,14 @@ if (isset($_GET['id'])) {
                                                     <!-- Credit card form tabs -->
                                                     <ul class="nav nav-pills bg-light  rounded nav-fill" id="pills-tab" role="tablist">
                                                         <li class="nav-item" role="presentation">
-                                                            <button class="nav-link active" id="liabs" data-bs-toggle="pill" data-bs-target="#history" type="button" role="tab" aria-controls="pills-home" aria-selected="true">History</button>
+                                                            <button class="nav-link active" id="liabs" data-bs-toggle="pill" data-bs-target="#history" type="button" role="tab" aria-controls="pills-home" aria-selected="true">1. History</button>
                                                         </li>
 
                                                         <li class="nav-item" role="presentation">
-                                                            <button class="nav-link" id="transaction_details" data-bs-toggle="pill" data-bs-target="#details" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" disabled>Payment</button>
+                                                            <button class="nav-link" id="transaction_details" data-bs-toggle="pill" data-bs-target="#details" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" disabled>2. Payment</button>
                                                         </li>
                                                         <li class="nav-item" role="presentation">
-                                                            <button class="nav-link" id="receiptOfficial" data-bs-toggle="pill" data-bs-target="#receipt" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Receipt</button>
+                                                            <button class="nav-link" id="receiptOfficial" data-bs-toggle="pill" data-bs-target="#receipt" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">3. Receipt</button>
                                                         </li>
                                                     </ul>
                 </div>
@@ -240,8 +240,8 @@ if (isset($_GET['id'])) {
 <?php
                                                                 require 'checkLiabilities.php';
                                                                 ?>
-                                                                <div class="container-fluid" style="height: 200px; overflow: auto;">
-                                                                <table class="table table-striped table-sm" style="padding: 0;">
+                                                                <div class="container-fluid mx-0 px-0" style="height: 300px; overflow: auto;">
+                                                                <table class="table table-striped table-sm" style="width: 100%; padding: 0;">
                                                                     <thead>
                                                                         <tr>
 
@@ -300,7 +300,7 @@ if (isset($_GET['id'])) {
                                                                     </tbody>
                                                                 </table>
                                                                 </div>
-                                                                <button type="submit" href="#" id="proceed_button" name="proceed_button" form="Year_Selected" onclick="goNext();" class="btn btn-success btn-block shadow-sm">
+                                                                <button type="submit" href="#" id="proceed_button" name="proceed_button" form="Year_Selected" onclick="goNext();" class="btn btn-success btn-block shadow-sm mt-3">
 
                                                                     Proceed to Payment
                                                                 </button>
@@ -1277,6 +1277,7 @@ $(document).ready(function() {
 }
 
 function addPaymentHistory() {
+var rec_no = $("#receiptNumber").val();
 var td_arps = $("#td_ARP").val();
 var addrs = $("#addRess").val();
 var tp_names = $("#namePayer").val();
@@ -1290,6 +1291,7 @@ $(document).ready(function() {
         type: "POST",
         async: false,
         data: {
+            receiptNumber: rec_no,
             td_ARP: td_arps,
             addRess: addrs,
             namePayer: tp_names,

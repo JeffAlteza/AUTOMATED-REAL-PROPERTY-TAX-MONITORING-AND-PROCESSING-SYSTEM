@@ -9,7 +9,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 include('connection.php');
-$receipt_num = htmlspecialchars($_POST['receiptNumber']);
+$receipt_num = ($_POST['receiptNumber']);
 $td_arp = htmlspecialchars($_POST['td_ARP']);
 $tpname = ($_POST['namePayer']);
 $address = htmlspecialchars($_POST['addRess']);
