@@ -171,7 +171,7 @@
                 You can select year range you want to compute. </p></div>';
                                         echo '
                 <div class="col-lg-2 col-sm-12 my-1 mx-0 d-flex align-items-center">
-                <select class="custom-select" style="height: 30px;" name="latestPaymentselect"  id="latestPaymentselect">
+                <select class="custom-select" style="height: 30px;" name="latestPaymentselect1"  id="latestPaymentselect">
                 
                 <option selected>' . $latestPayment1 . '</option>';
 
@@ -180,7 +180,7 @@
 
                                         echo '
                 <div class="col-lg-2  col-sm-12 mx-0 d-flex align-items-center">
-                <select class="custom-select" style="height: 30px;" name="rangePaymentselect" id="rangePaymentselect">
+                <select class="custom-select" style="height: 30px;" name="rangePaymentselect1" id="rangePaymentselect">
                 <option selected value="0">Year</option>';
                                         for ($j = $latestPayment + 2; $j <= $currentYears; $j++) {
                                             echo '

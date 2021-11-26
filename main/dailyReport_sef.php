@@ -168,7 +168,7 @@ if ($results->num_rows>0) {
     <td>'.$result['DATE'].'</td>
     <td>'.$result['TD_ARP'].'</td>
     <td>'.$result['PAYOR'].'</td>
-    <td>RPT</td>
+    <td>SEF</td>
     <td>'.$result['SEF_REPORT'].'</td>
     ';
     

@@ -118,7 +118,8 @@ if(isset($_SESSION['login'])){
                                   <?php if(isset($error_msg)){
                               echo '<span style="color:red; font-size: 12px">'.$error_msg.'</span>';
                             } ?>
-                                <button type="submit" name="login" class="btn btn-success btn-block col-12 text-uppercase mb-1 rounded-0  shadow-sm">Sign in</button>
+                                <button type="submit" name="login" style="background: linear-gradient(
+                60deg, #66bb6a, #43a047);" class="btn btn-block col-12 text-uppercase mb-1 rounded-0  shadow-sm">Sign in</button>
                                 <div class="form-group mt-0 p-0 text-center">
                                   <a style="font-size: 12px; color: #6c757d;" class="" href="../res\forgot\forgot-password.php" id="forgotPass">Forgot Password? Click here</a>
                                   </div>

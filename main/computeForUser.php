@@ -125,10 +125,8 @@ if ($result3->num_rows>0) {
 
 
     if(isset($_POST["compute"])) {
-        $selYear=$_POST["latestPaymentselect"];
-        $selRange=$_POST["rangePaymentselect"];
-        $_SESSION['sel_year']=$selYear;
-        $_SESSION['sel_range']=$selRange;
+        $selYear=$_POST["latestPaymentselect1"];
+        $selRange=$_POST["rangePaymentselect1"];
 
         //$selYear =   $_SESSION['SEL_YEAR'];
         //$selRange =   $_SESSION['SEL_RANGE'];

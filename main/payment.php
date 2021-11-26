@@ -340,8 +340,9 @@ require 'compute.php'
                                                                             <label for="amountPaid" style="font-weight: normal; font-size: 13px; margin-bottom: 0px" class="form-label form-label-sm">Amount</label>
                                                                             <input type="text" name="amountPaid" id="amountPaid" placeholder="Enter Amount" onkeyup="check_input();" required class="form-control " value="" onkeypress="return isNumberKey(event)">
                                                                         </div>
+                                                                        <div class="col-sm-12">
                                                                         <span style="font-family: Roboto; font-size: 13px; font-weight: normal; margin-bottom: 0px" id="receipt_message"></span>
-
+                                                                        </div>
 
 
 
@@ -1277,6 +1278,7 @@ $(document).ready(function() {
 }
 
 function addPaymentHistory() {
+var rec_no = $("#receiptNumber").val();
 var td_arps = $("#td_ARP").val();
 var addrs = $("#addRess").val();
 var tp_names = $("#namePayer").val();
@@ -1290,6 +1292,7 @@ $(document).ready(function() {
         type: "POST",
         async: false,
         data: {
+            receiptNumber: rec_no,
             td_ARP: td_arps,
             addRess: addrs,
             namePayer: tp_names,

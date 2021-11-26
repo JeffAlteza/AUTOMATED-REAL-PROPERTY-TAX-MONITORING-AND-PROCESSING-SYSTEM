@@ -2,7 +2,7 @@
 require 'connection.php';
 session_start();
 if (!isset($_SESSION['login'])) {
-  header("Location: login.php");
+  header("Location: ..\homepage\public\index.html");
   session_destroy();
   exit;
 }

@@ -68,7 +68,7 @@
                  <div class="col-lg-4 ">
                      <div class="card">
                          <div class="card-header card-header-success">
-                             <h4 class="card-title" style="font-weight: 600;">Check your Tax Due</h4>
+                             <h4 class="card-title" style="font-weight: 600;">Property Details</h4>
                              <p class="card-category">Complete your property details.</p>
                          </div>
                          <div class="card-body mt-2">
